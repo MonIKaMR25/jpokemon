@@ -4,9 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>PokéVerse — Tu Pokédex Interactiva</title>
-<script src="https://cdn.tailwindcss.com"></script>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<script src="./js/vendor/tailwindcdn.js"></script>
 
 <style>
   :root {
@@ -43,13 +41,13 @@
   body {
     background: var(--bg);
     color: var(--text);
-    font-family: 'Nunito', sans-serif;
+    font-family: "Segoe UI", "Noto Sans", "Helvetica Neue", Arial, sans-serif;
     min-height: 100vh;
     overflow-x: hidden;
     transition: background 0.3s, color 0.3s;
   }
 
-  .pixel { font-family: 'Press Start 2P', monospace; }
+  .pixel { font-family: "Courier New", "Lucida Console", monospace; }
 
   /* SCANLINE overlay */
   body::before {
@@ -73,7 +71,7 @@
     color: #fff;
     border-radius: 8px;
     padding: 6px 14px;
-    font-family: 'Nunito', sans-serif;
+    font-family: "Segoe UI", "Noto Sans", "Helvetica Neue", Arial, sans-serif;
     font-weight: 700;
     font-size: 13px;
     cursor: pointer;
@@ -117,7 +115,7 @@
     color: var(--text);
     border-radius: 12px;
     padding: 10px 16px 10px 44px;
-    font-family: 'Nunito', sans-serif;
+    font-family: "Segoe UI", "Noto Sans", "Helvetica Neue", Arial, sans-serif;
     font-size: 15px;
     width: 100%;
     transition: border-color 0.2s, box-shadow 0.2s;
@@ -254,7 +252,6 @@
     animation: hurt 0.4s ease;
   }
   @keyframes attackRight { 0%,100%{transform:translateX(0)} 50%{transform:translateX(30px)} }
-  @keyfunction attackLeft { 0%,100%{transform:translateX(0)} 50%{transform:translateX(-30px)} }
   @keyframes attackLeft { 0%,100%{transform:translateX(0)} 50%{transform:translateX(-30px)} }
   @keyframes hurt { 0%,100%{filter:none} 25%,75%{filter:brightness(3) saturate(0)} 50%{transform:translateX(5px)} }
   @keyframes shake { 0%,100%{transform:rotate(0)} 25%{transform:rotate(-3deg)} 75%{transform:rotate(3deg)} }
@@ -332,7 +329,7 @@
     padding: 12px 24px; cursor: pointer;
     transition: all 0.2s;
     display: flex; align-items: center; gap: 8px;
-    font-family: 'Nunito', sans-serif; font-size: 15px;
+    font-family: "Segoe UI", "Noto Sans", "Helvetica Neue", Arial, sans-serif; font-size: 15px;
     box-shadow: 0 4px 15px rgba(238,21,21,0.4);
   }
   .btn-capture:hover { transform: translateY(-2px); box-shadow: 0 8px 25px rgba(238,21,21,0.5); }

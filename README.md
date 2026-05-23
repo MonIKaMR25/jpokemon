@@ -3,7 +3,7 @@
 SPA estática inspirada en Pokémon (sin frameworks) usando:
 
 - HTML
-- TailwindCSS por CDN
+- TailwindCSS autoalojado (sin CDN remoto)
 - JavaScript modular (ES Modules)
 - PokeAPI
 
@@ -26,3 +26,8 @@ SPA estática inspirada en Pokémon (sin frameworks) usando:
 ## Deploy estático
 
 Puede desplegarse como sitio estático en Nginx, GitHub Pages o cualquier servidor de archivos.
+
+## Seguridad de recursos estáticos
+
+- El runtime de Tailwind se sirve desde `js/vendor/tailwindcdn.js` para evitar la carga de scripts de terceros sin control de integridad.
+- Se eliminaron dependencias remotas de fuentes para reducir la superficie de riesgo en recursos externos.

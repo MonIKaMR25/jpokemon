@@ -191,7 +191,7 @@ function createPokeCard(p, animDelay = 0) {
       ${captured ? `<span style="position:absolute;top:4px;right:4px;font-size:14px">⚾</span>` : ''}
       <img src="${img}" alt="${p.name}" loading="lazy"
         style="width:100px;height:100px;object-fit:contain;display:block;margin:auto;filter:drop-shadow(0 4px 8px rgba(0,0,0,0.3))"
-        onerror="this.src='https://via.placeholder.com/100x100?text=?'">
+        onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Crect fill=%22%23d1d5db%22 width=%22100%22 height=%22100%22/%3E%3Ctext x=%2250%22 y=%2254%22 dominant-baseline=%22middle%22 text-anchor=%22middle%22 font-family=%22Arial%22 font-size=%2232%22 fill=%22%236b7280%22%3E%3F%3C/text%3E%3C/svg%3E'">
     </div>
     <div class="poke-num">#${String(p.id).padStart(3, '0')}</div>
     <div class="poke-name">${p.name}</div>
@@ -385,7 +385,7 @@ function renderCollection() {
         <button onclick="releasePokemon(${p.id},event)" style="position:absolute;top:4px;right:4px;background:rgba(255,0,0,0.3);border:none;border-radius:50%;width:22px;height:22px;cursor:pointer;font-size:11px;display:flex;align-items:center;justify-content:center;color:#fff" title="Liberar">✕</button>
         <img src="${p.sprite || ''}" alt="${p.name}" loading="lazy"
           style="width:100px;height:100px;object-fit:contain;display:block;margin:auto;filter:drop-shadow(0 4px 8px rgba(0,0,0,0.3))"
-          onerror="this.src='https://via.placeholder.com/100?text=?'">
+          onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Crect fill=%22%23d1d5db%22 width=%22100%22 height=%22100%22/%3E%3Ctext x=%2250%22 y=%2254%22 dominant-baseline=%22middle%22 text-anchor=%22middle%22 font-family=%22Arial%22 font-size=%2232%22 fill=%22%236b7280%22%3E%3F%3C/text%3E%3C/svg%3E'">
       </div>
       <div class="poke-num">#${String(p.id).padStart(3, '0')}</div>
       <div class="poke-name">${p.name}</div>
